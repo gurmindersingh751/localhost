@@ -6,7 +6,7 @@ if(empty($_REQUEST["id"])){
 }
 $id = htmlentities($_REQUEST["id"]);
 
-$folder = "/Applications/XAMPP/xamppfiles/htdocs/RentACar/ava/" .$id;
+$folder = "https://gurmindersingh751.github.io/localhost/RentACar/secure/RentACar/ava/" .$id;
 
 if(!file_exists($folder)){
     mkdir($folder, 0777,true);
@@ -21,18 +21,18 @@ if(move_uploaded_file($_FILES["file"]["tmp_name"], $folder)){
 }
 
 
-$file = parse_ini_file("../../../RentACar.ini");
+$file = parse_ini_file("https://gurmindersingh751.github.io/localhost/RentACar.ini");
 
 $host = trim($file["dbhost"]);
 $user = trim($file["dbuser"]);
 $pass = trim($file["dbpass"]);
 $name = trim($file["dbname"]);
 
-require("secure/access.php");
+require("https://gurmindersingh751.github.io/localhost/RentACar/secure/access.php");
 $access = new access($host, $user, $pass,$name);
 $access->connect();
 
-$path = "http://localhost/RentACar/ava/" . $id . "/ava.jpg";
+$path = "https://gurmindersingh751.github.io/localhost/RentACar/ava/" . $id . "/ava.jpg";
 $access->updateAvaPath($path, $id);
 
 

@@ -5,7 +5,7 @@ $model = isset($_REQUEST["model"]);
 $color = isset($_REQUEST["color"]);
 
 
-$file = parse_ini_file("../../../RentACar.ini");
+$file = parse_ini_file("https://gurmindersingh751.github.io/localhost/RentACar.ini");
 
 $host = trim($file["dbhost"]);
 $user = trim($file["dbuser"]);

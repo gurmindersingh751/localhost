@@ -18,7 +18,7 @@ $price = htmlentities($_REQUEST["price"]);
 
 // STEP 2. Build connection
 // Secure way to build conn
-$file = parse_ini_file("../../../RentACar.ini");
+$file = parse_ini_file("https://gurmindersingh751.github.io/localhost/RentACar.ini");
 
 // store in php var inf from ini var
 $host = trim($file["dbhost"]);
@@ -27,7 +27,7 @@ $pass = trim($file["dbpass"]);
 $name = trim($file["dbname"]);
 
 // include access.php to call func from access.php file
-require ("secure/access.php");
+require ("https://gurmindersingh751.github.io/localhost/RentACar/secure/access.php");
 $access = new access($host, $user, $pass, $name);
 $access->connect();
 
@@ -48,7 +48,7 @@ if (empty($user)) {
 
 // STEP 4. Emailing
 // include email.php
-require ("secure/email.php");
+require ("https://gurmindersingh751.github.io/localhost/RentACar/secure/email.php");
 
 // store all class in $email var
 $email = new email();

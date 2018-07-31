@@ -17,14 +17,14 @@ if(empty($username) || empty($password) || empty($email) || empty($fullname)){
 $salt = openssl_random_pseudo_bytes(20);
 $secured_password = sha1($password . $salt);
 
-$file = parse_ini_file("../../../RentACar.ini");
+$file = parse_ini_file("https://gurmindersingh751.github.io/localhost/RentACar.ini");
 
 $host = trim($file["dbhost"]);
 $user = trim($file["dbuser"]);
 $pass = trim($file["dbpass"]);
 $name = trim($file["dbname"]);
 
-require("secure/access.php");
+require("https://gurmindersingh751.github.io/localhost/RentACar/secure/access.php");
 $access = new access($host, $user, $pass,$name);
 $access->connect();
 
